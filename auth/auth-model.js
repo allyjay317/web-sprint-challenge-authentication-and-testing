@@ -7,7 +7,7 @@ function getUsers() {
 }
 
 async function getUserByUsername(username) {
-  const user = db('users').where({ username }).first()
+  const user = await db('users').where({ username }).first()
   return { ...user, token: generateToken(user) }
 }
 
