@@ -26,11 +26,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+  sessions rely on cookies which are attached to the server itself and needs to be saved to a database on the server or would be lost on a restart. json web tokens rely on a hashing algorithm so that the token information is seprate from the server itself
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+  bcrypt hashes passwords so that if someone were to access our databases, they wouldn't be able to read the passwords, and makse brute force attacks much harder
 
 3. How are unit tests different from integration and end-to-end testing.
 
+  unit tests test a singular functionality of our application to make sure one thing is working properly, while end-to-end testing tests the entire user experience going through the application.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+  if we define the functionality we're looking for in our application up front, it can be much faster to determine if the code we've written has worked, as opposed to testing after writing the code and having to rewrite code because something didn't work properly
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -63,8 +71,8 @@ In your solution, it is essential that you follow best practices and produce cle
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
 - [ ] Write at least 4 tests per endpoint.
-- [ ] Extract user validation into a separate method and write unit tests for it.
-- [ ] Use a separate testing database for the endpoint tests.
+- [X] Extract user validation into a separate method and write unit tests for it.
+- [X] Use a separate testing database for the endpoint tests.
 - [ ] Implement authentication with the other method, if you used JWTs for MVP use sessions for stretch and vice versa.
 
 ## Submission format
