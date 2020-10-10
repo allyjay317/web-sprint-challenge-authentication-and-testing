@@ -1,7 +1,6 @@
 const knex = require('knex')
 const db = require('../database/dbConfig')
-
-const { generateToken } = require('./registerUser')
+const jwt = require('jsonwebtoken')
 
 function getUsers() {
   return db('users')
